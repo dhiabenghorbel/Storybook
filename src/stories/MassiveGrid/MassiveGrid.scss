@@ -1,0 +1,115 @@
+input.k-textbox {
+  width: 100%;
+  text-align: center;
+}
+.k-grid-header .k-header {
+  vertical-align: middle;
+}
+.k-grid-header .k-header > .k-link {
+  text-align: center;
+  text-overflow: clip;
+  white-space: normal;
+  font-size: 12px;
+  color: #000000;
+  font-weight: 500;
+}
+.k-grid th,
+.k-grid td {
+  text-align: center;
+}
+
+.on-move {
+  border: 1px solid #abaaa9;
+}
+.k-grid-header .k-header > .k-grid td {
+  text-overflow: clip;
+  white-space: normal;
+  font-size: 12px;
+  text-align: center;
+}
+
+.k-textbox.cell-modified {
+  color: rgba(0, 0, 0, 0.9) !important;
+  border-color: #333131 !important;
+  background-color: rgba(53, 79, 238, 0.16) !important;
+}
+.k-textbox:enabled {
+  background-color: #ffffff;
+  border-color: black;
+  color: black;
+}
+
+.k-textbox.cell-modified:hover {
+  background-color: #ffffff !important;
+  color: #656a74;
+}
+.k-textbox:focus {
+  background-color: #ffffff !important;
+  border-color: var(--colour-secondary) !important ;
+  color: black !important;
+}
+.k-grid th,
+.k-grid td {
+  padding: 0.5rem;
+}
+.k-grid-header,
+.k-header,
+th.k-header,
+.k-grid-header-wrap,
+.k-grouping-header,
+.k-grouping-header .k-group-indicator,
+.k-grid td,
+.k-grid-footer,
+.k-grid-footer-wrap,
+.k-grid-content-locked,
+.k-grid-footer-locked,
+.k-grid-header-locked,
+.k-filter-row > td,
+.k-filter-row > th {
+  width: fit-content;
+}
+//Filter button
+.k-button.k-primary {
+  background-color: var(--colour-secondary) !important;
+  border: none !important;
+}
+
+.k-textbox > input {
+  border: none;
+  &:focus {
+    border: none;
+  }
+}
+
+.cell-marked {
+  border: 3px solid var(--colour-secondary);
+}
+
+.k-textArea {
+  resize: none;
+  font-size: 12px;
+  height: 5rem;
+  padding: 4px 8px;
+  margin: 4px;
+}
+
+.k-textbox:disabled,
+.k-textbox[disabled],
+.k-textbox.k-state-disabled {
+  color: #000000;
+  text-align: center;
+}
+
+.k-grid-header-wrap > table {
+  width: 100% !important;
+}
+
+.k-grid-content table,
+.k-grid-content-locked table {
+  width: 100% !important;
+}
+
+.disable-action {
+  color: #afafaf !important;
+  cursor: not-allowed;
+}

@@ -1,0 +1,161 @@
+import { Meta } from "@storybook/addon-docs";
+import * as constants from "../../GP4You/constants";
+
+<Meta title={`${constants.menuPath}/Props/props`} />
+
+# Props in DataItem and DataSection
+
+## DataItems props:
+
+- `action?: "C" | "M" | "D"` → Identifies the process in which an occurrence is taking place: create/modify/delete.
+
+- `allowFor?: string[]` → Array of values which have access to the field. Used when a DataItem is displayed only when a specific value is selected in the referenced field (it only works with the `reference` prop).
+
+- `autoComplete?: boolean`→ Enables auto-complete in select fields.
+
+- `avoidPost?: boolean` → The value of the item is not sent in the callback.
+
+- `button?: boolean` → Button-type item.
+
+- `correspondence?: string` → Used for the 'datafromdirectory' call to filter options.
+
+- `datasection?: string` → Passes the datasection name.
+
+- `defaultValue?: string | number` → Assigns a default value.
+
+- `disabled?: string` → Disabled button.
+
+- `domain?: string` → Domain name.
+
+- `dossier?: string ("id" | "owner" | undefined)` → User identification number or owner. Used to search/filter occurrences by ID or dossier.
+
+- `downloadable?: boolean` → Item containing a downloadable file.
+
+- `empty?: boolean` → Empty input.
+
+- `filterBySubordinate?: boolean`
+
+- `filterItem?: boolean` → Filter in select options.
+
+- `forbidFor?: string[] | string` → Array of values which do not have access to the field. This is the exact opposite of AllowFor. It only displays the field when the referenced field does NOT have the indicated value (it only works with the `reference` prop).
+
+- `forcedValue?: string | ""` → Used to force a value inside a dataItem.
+
+- `forceParam?: boolean`
+
+- `forcePost?: boolean` → Value with a forced post.
+
+- `gpVal?: any` → Value from parent element. Used in occurrences.
+
+- `hidden?: boolean` → Hidden field.
+
+- `hiddenInModal?: boolean` → Hidden field in modal.
+
+- `hideIfNoValue?: boolean` → Field hidden when empty.
+
+- `isDossierOccurrence?: boolean` → Return all the Occurences with no filter.
+
+- `idTask?: string` → Identify the task.
+
+- `isModal?: boolean` → Item opens in modal.
+
+- `label?: string` → Literal of the field to display.
+
+- `labelKey?: string` → Identifier for searching.
+
+- `max?: string | number | undefined` → Maximum input number.
+
+- `maxLength?: number` → Maximum length of numbers in input.
+
+- `min?: string | number | undefined` → Minimum input numbers.
+
+- `minLength?: number` → Minimum length of numbers in input.
+
+- `modalTag?: string` → Label or identifier of modal.
+
+- `name: string` → Table property name.
+
+- `names?: string[]` → Array of table property names.
+
+- `noEmptyOption?: boolean` → Prevents empty option in select.
+
+- `notUploadable?: boolean` → Prevents or enables files upload. It is “true” by default.
+
+- `nulign?: string` → Unique identifier of the occurrence.
+
+- `nuStep?: string` → Identifier for searching.
+
+- `onChangeSelect?: Function` → Receives value of select when it changes.
+
+- `or?: string[]` → Options in boolean-type data item.
+
+- `parameter?: boolean` → Request with requirements. The GP fetches data depending on the parameter.
+
+- `parameterWithSubordinate?: boolean`
+
+- `population?: string` → Population name.
+
+- `readOnly?: boolean` → Read-only field.
+
+- `reference?: string | string[]` → Requires information from another field. For example, in a dynamic select whose content depends on which option you choose in another select.
+
+- `regex?: string` → Regex in validation loop.
+
+- `required?: boolean` → Field required.
+
+- `requiredFor?: string[]` → Values which have a required field (it only works with the `reference` prop).
+
+- `type: | "text" | "number" | "boolean" | "float" | "customFloat" | "integer" | "email" | "textarea" | "password" | "percent" | "rangeDate" | "time" | "clock" | "timePicker" | "date" | "month" | "year" | "select"` → Type of the item.
+
+- `useMultipleModal?: boolean` → Clicking on a row opens a modal.
+
+- `useRefValue?: boolean` → Value taken from reference.
+
+- `value?: string` → Value of options in a select.
+
+- `validationType?: string` → Validation of the value according to the type.
+
+### Style props in DataItem:
+
+- `aligned?: boolean` → Style prop, items in the same line.
+- `big?: boolean` → Style prop, sets a large size for the column.
+- `bigMarginRight?: boolean` → Style prop, big right margin in the item.
+- `bigSize?: boolean` → Style prop, large item size.
+- `bold?: boolean` → Style prop, bold text.
+- `extraSmallSize?: boolean` → Style prop, extra small item size.
+- `halfwidth?: boolean` → Style prop, half width in the select source.
+- `marginLeft?: boolean` → Style prop, margin in the left of the item.
+- `mediumSize?: boolean` → Style prop, medium item size.
+- `small?: boolean` → Sets a small size for the column.
+- `smallSize?: boolean` → Style prop, small item size.
+
+## DataSection Props:
+
+- `action?: "C" | "M"` → It identifies the action that the occurrence performs. The options are “C” (create) and “M” (modify).
+- `dossier?: "id" | "owner"` → The employee's folder or 'owner' is passed when it's a task, notification, or request.
+- `domain?: string` → Domain name.
+- `multiple?: boolean` → It transforms the dataSection into a table.
+- `multipleTable?: boolean` → Reviewing a table within another table.
+- `name?: string` → dataSection name.
+- `population?: string` → Population name.
+- `useMultipleModal?: boolean` → It is passed to the dataItem. Modal inside another modal.
+- `readOnly?: boolean` → Read-only field
+
+### Multiple Table Props:
+
+- `isDossierOccurrence?: boolean`
+- `isModal?: boolean` → The item is opened in a modal.
+- `modalTag?: string` → Label or identifier of the modal (when it is a modal within another modal).
+- `nulign?: string` → Unique identifying field of the occurrence.
+- `nuStep?: string` → Identifier for searching item occurence.
+
+### Multiple Datasection Props:
+
+- `add?: boolean` → It allows to add a new line in a table.
+- `DetailForm?: ReactElement` → It is used in a table. If you want more information to display in the modal, you add this prop and pass another form.
+- `edit?: boolean` → It allows to modify a line in a table.
+- `onClick?: Function` → The event onClick should be assigned a function.
+- `onlyUpdatedOccurrences?: boolean` → Returns an array containing two Occurrence[], first one is displaying occurrences where onlyUpdatedOccurrences filter is applied
+- `preventPopup?: boolean` → It is used to prevent the modal from opening when clicked.
+- `reload?: boolean` → It is used to refresh the modal.
+- `remove?: boolean` → It allows to delete a line in a table.

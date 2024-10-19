@@ -1,0 +1,25 @@
+.nudoss-selector {
+  height: 9rem;
+}
+
+.nudoss-selector-button-container {
+  height: 5rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.dossiers-container {
+  overflow: auto;
+  border: 1px solid #e5e5e5;
+  position: absolute;
+  height: 90%;
+  width: 100%;
+  border-radius: 9px;
+  padding: 20px;
+  margin-bottom: 5%;
+  background-color: #c6c6c66b;
+  @media screen and (max-width: 425px) {
+    height: 58%;
+  }
+}

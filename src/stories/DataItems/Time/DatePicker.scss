@@ -1,0 +1,73 @@
+.date-box {
+  margin-top: 1rem;
+  width: 100%;
+  font-size: 30px !important ;
+  & > label {
+    color: rgba(0, 0, 0, 0.6) !important;
+    transform: translateX(0px) !important;
+    z-index: 0;
+  }
+  & > div {
+    margin-top: 16px;
+    justify-content: space-between;
+    align-items: baseline;
+    & > input {
+      width: 100%;
+      height: auto;
+      margin-right: -24%;
+      position: relative;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      transition: 0.3s ease;
+      font-size: 1rem !important;
+      border-bottom: 1px solid var(--colour-disabled);
+      padding: 4px 4px 4px 0px;
+
+      &:focus-within {
+        border-bottom: 1px solid var(--colour-info);
+        box-shadow: 0 1px 0 0 var(--colour-info);
+      }
+
+      &:hover {
+        border-bottom: 1px solid var(--colour-primary);
+      }
+      &:disabled {
+        border-bottom: 1px dotted var(--colour-disabled);
+        color: var(--colour-disabled);
+        -webkit-text-fill-color: var(--colour-disabled); //iOS
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.DateRangePicker {
+  max-width: 30rem;
+  max-height: 30rem;
+}
+
+.date-range_arrow {
+  margin : 1rem
+}
+
+.date-picker-input {
+  /* Remove default styles */
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  padding: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  color: #333;
+  /* Add custom styles */
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+
+.date-picker-input:focus {
+  border-color: #f07c00;
+}

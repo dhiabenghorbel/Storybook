@@ -1,0 +1,13 @@
+build/
+node_modules/
+utils/
+.idea/
+.vscode/
+
+.git
+.gitignore
+
+
+debug.log
+README.md
+README.old.md

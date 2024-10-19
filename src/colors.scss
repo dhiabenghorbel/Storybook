@@ -1,0 +1,43 @@
+$primary: #252d3a;
+$secondary: #f07c00;
+$third: #f07c00;
+$success: #4caf50;
+$danger: red;
+$info: #2196f3;
+$warning: #ffb005;
+$disabled: #6e6e6e;
+$headerbg: #252d3a;
+$header-text-category: #252d3a;
+$header-text-info: #252d3a;
+$headerbox: transparent;
+$sidebar: rgba(37, 45, 58, 0.96);
+$rolelist: #474b52;
+$border: #6d6d6d42;
+$light: #ffffff;
+$link: #337ab7;
+$button: #ffffff;
+$currentDayCalendar: #ed3a3a;
+$opacity: ".8";
+
+:root {
+  --colour-primary: #{$primary};
+  --colour-secondary: #{$secondary};
+  --colour-third: #{$third};
+  --colour-success: #{$success};
+  --colour-danger: #{$danger};
+  --colour-info: #{$info};
+  --colour-warning: #{$warning};
+  --colour-disabled: #{$disabled};
+  --colour-header-text-category: #{$header-text-category};
+  --colour-header-text-info: #{$header-text-info};
+  --colour-headerbg: #{$headerbg};
+  --colour-headerbox: #{$headerbox};
+  --colour-sidebar: #{$sidebar};
+  --colour-rolelist: #{$rolelist};
+  --colour-light: #{$light};
+  --colour-link: #{$link};
+  --colour-currentDayCalendar: #{$currentDayCalendar};
+  --colour-button: #{$button};
+  --colour-border: #{$border};
+  --opacity: #{$opacity};
+}

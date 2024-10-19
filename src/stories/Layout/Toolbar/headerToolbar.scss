@@ -1,0 +1,18 @@
+.header-toolbar {
+  position: fixed;
+  top: 0;
+  background-color: var(--colour-headerbg);
+  width: 100%;
+  z-index: 700;
+}
+
+.header-toolbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 2rem;
+  height: 2.5rem;
+  @media screen and (max-width: 425px) {
+    margin: 0;
+  }
+}

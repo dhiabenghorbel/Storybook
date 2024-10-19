@@ -1,0 +1,25 @@
+.user-item {
+  display: flex;
+  padding: 1rem;
+  margin: 1rem;
+  // border: 1px solid var(--colour-disabled);
+  border-radius: 10px;
+  background-color: white;
+}
+
+.user-item-selected {
+  box-shadow: 0 0 2px 0 var(--colour-secondary), 0 2px 4px 0 var(--colour-secondary);
+  width : fit-content
+}
+
+.user-item-selected .info {
+  color: grey;
+}
+
+.user-item:hover .info {
+  color: var(--colour-headerbg);
+}
+
+.user-item:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,67 @@
+// @use '../../../colors.scss';
+
+.circular-button {
+  cursor: pointer;
+  position: relative;
+  align-content: center;
+  color: var(--primary-color);
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 50%;
+  font-size: 14px;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  &:hover {
+    color: var(--colour-third);
+  }
+  &:focus {
+    color: var(--colour-third);
+  }
+  &:active {
+    color: var(--colour-third);
+  }
+  @media screen and (max-width: 425px) {
+    border: none;
+    width: 34px;
+    height: 34px;
+    color: var(--colour-light);
+    font-size: 22px;
+  }
+
+  i {
+    cursor: pointer;
+  }
+}
+
+.circular-button-badge {
+  transition: 0.4s ease;
+  width: 21px;
+  height: 21px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 11px;
+}
+
+.circular-button-badge-displaced {
+  position: absolute;
+  top: -0.7rem;
+  right: -0.8rem;
+}
+
+.circular-button-badge-default-color {
+  background-color: var(--colour-secondary);
+  color: var(--colour-light);
+  @media screen and (max-width: 425px) {
+    background-color: var(--colour-third);
+    color: var(--colour-primary);
+  }
+}
+
+.circular-button-badge-disabled-color {
+  background-color: var(--colour-disabled);
+  color: var(--colour-button);
+}

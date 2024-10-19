@@ -1,0 +1,79 @@
+$spinner-size: 60px;
+$spinner-size-big: 120px;
+$spinner-size-small: 20px;
+
+.loading-wrapper {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+.spinner-loading {
+  animation: rotation 1s infinite linear;
+  border-top: 3px solid var(--colour-disabled);
+  border-left: 3px solid var(--colour-rolelist);
+  border-bottom: 3px solid var(--colour-rolelist);
+  border-right: 3px solid var(--colour-rolelist);
+  border-radius: 100%;
+  margin: auto;
+  z-index: 3;
+}
+
+.spinner-type-default {
+  height: $spinner-size;
+  width: $spinner-size;
+  border-top: 3px solid var(--colour-secondary);
+  border-left: 3px solid var(--colour-disabled);
+  border-bottom: 3px solid var(--colour-disabled);
+  border-right: 3px solid var(--colour-disabled);
+}
+
+.spinner-type-big {
+  height: $spinner-size-big;
+  width: $spinner-size-big;
+  border-top: 5px solid var(--colour-secondary);
+  border-left: 5px solid var(--colour-disabled);
+  border-bottom: 5px solid var(--colour-disabled);
+  border-right: 5px solid var(--colour-disabled);
+}
+
+.spinner-type-default-small {
+  height: $spinner-size-small;
+  width: $spinner-size-small;
+  border-top: 3px solid var(--colour-secondary);
+  border-left: 3px solid var(--colour-disabled);
+  border-bottom: 3px solid var(--colour-disabled);
+  border-right: 3px solid var(--colour-disabled);
+}
+
+.spinner-type-button {
+  height: $spinner-size-small;
+  width: $spinner-size-small;
+  border-top: 1px solid white;
+  border-left: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-right: 1px solid transparent;
+}
+
+.spinner-type-badge {
+  height: 15px;
+  width: 15px;
+  border-top: 1px solid white;
+  border-left: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-right: 1px solid transparent;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}

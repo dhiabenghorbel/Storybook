@@ -1,0 +1,31 @@
+import { Meta } from "@storybook/addon-docs";
+import * as constants from "../../GP4You/constants";
+
+<Meta title={`${constants.menuPath}/Hooks/useStateFulDataItem`} />
+
+# useStateFulDataItem
+
+The `useStatefulDataItem` hook is designed to manage the state of a data item within a specific context. It receives an object `IDataItem`, which contains various information about the data item, such as the current value, type, domain, dossier, validation options, etc.
+
+Here's a more detailed explanation of the main functionalities of the hook:
+
+1. **Context Data**: The hook uses React's Context API to access context data. Specifically, it uses `GPContext`, `ModificableGPActionContext`, `SubordinatesContext`, and `LanguageContext`.
+
+2. **Value Handling**: The hook manages the current value of the data item using React's state (`useState`). Initially, the value is computed using the `occurrenceProcessing.applyValueModifiers` function, which performs specific operations for each data type (such as formatting, conversion, etc.).
+
+3. **`onChange` Function**: The hook returns an `onChange` function that can be used to update the value of the data item. When called, this function performs a series of operations:
+
+   - Applies any value modifiers specific to the data type (using `occurrenceProcessing.applyValueModifiers`).
+   - Performs some validity checks on the new value using the `checkError` function.
+   - Calls the `modifyGpDispatch` function of the `ModificableGPActionContext`, passing the necessary parameters to update the global state of the context.
+   - Performs the update based on specified options, such as `parameter`, `parameterWithSubordinate`, `isModal`, etc.
+
+4. **Lifecycle**: The hook uses React's effects (`useEffect`) to handle the lifecycle of the data item. There are several effects that are executed in response to changes in the context or the current value of the data item.
+
+   - During mount, some initial checks are performed, and if necessary, the `modifyGpDispatch` function is called to set a default value.
+   - If the data type is "currency" and the value changes, the `onChange` function is called to ensure that the value is properly formatted as currency.
+   - Some effects handle specific behavior when the current value or other options change, such as `defaultValue`, `required`, `forcedValue`, etc.
+
+5. **useReferenceSubscription**: the hook is responsible for handling subscriptions to references associated with a data item. It sets up and manages the subscription to the reference, and when a new value is received, it can optionally trigger the onChangeCallback to handle the new value in the parent component that uses this hook.
+
+In summary, the `useStatefulDataItem` hook is a powerful tool for managing the state of a data item within the specified context, allowing controlled updates of the value and other operations related to the lifecycle of the data item.

@@ -1,0 +1,15 @@
+.badge-container {
+  width: 22rem;
+  display: flex;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-right: 5rem;
+  justify-content: space-between;
+}
+
+.badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

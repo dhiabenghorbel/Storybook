@@ -1,0 +1,7 @@
+.dossier-search-container {
+    padding-right: 3rem;
+
+    @media screen and (max-width: 1024px) {
+        padding: 0;
+    }
+}

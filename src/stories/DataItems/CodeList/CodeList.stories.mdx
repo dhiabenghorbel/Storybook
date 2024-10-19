@@ -1,0 +1,107 @@
+import { Meta } from "@storybook/addon-docs";
+import * as constants from "../../../GP4You/constants";
+import profile_before_click from "./../../../media/codelist/profile_before_click.png";
+import profile from "./../../../media/codelist/profile.png";
+import codelist_search_2 from "./../../../media/codelist/codelist_search_2.png";
+import codelist_search_3 from "./../../../media/codelist/codelist_search_3.png";
+import codelist_search_4 from "./../../../media/codelist/codelist_search_4.png";
+import codelist_search_5 from "./../../../media/codelist/codelist_search_5.png";
+import codelist_modal from "./../../../media/codelist/codelist_modal.png";
+import codelist_dataitem_2 from "./../../../media/codelist/codelist_dataitem_2.png";
+import codelist_dataitem_3 from "./../../../media/codelist/codelist_dataitem_3.png";
+import false_codelist_modal_dataitem from "./../../../media/codelist/false_codelist_modal_dataitem.png";
+import false_codelist_modal_with_search from "./../../../media/codelist/false_codelist_modal_with_search.png";
+import false_codelist_modal_without_search from "./../../../media/codelist/false_codelist_modal_without_search.png";
+
+<Meta title={`${constants.menuPath}/DataItems/CodeList`} />
+
+<style>
+  {`
+    .img-box {
+      display:flex;
+    }
+    .img-container {
+      display:flex;
+      width: 46%;    
+      flex-direction: row;
+      align-items: flex-start;
+    }  
+`}
+</style>
+
+# CodeList
+
+CodeList is a component that opens a modal with options and looks like this:
+
+<div className="img-container">
+  <img src={codelist_dataitem_2} alt="codelist_dataitem_2" />
+  <img src={codelist_modal} alt="codelist_modal" />
+</div>
+
+To use CodeList the dataitem must be type "codes" and you need to pass these props:
+
+- **CodeListForm** (form): form to show in codelist modal
+- **extField** (string): item from codelist results that we will use to fill the \_EXT dataitem
+- **requiredCLSearch** (boolean, optional): prop to force that results in codelist will be only called when we press the search button
+- **withCLSearch** (boolean, optional): prop to make that search inside codelist will work, but also results will be called just at opening
+- **directory** (string, optional): some items need a specific directory
+- Also, that dataItem should be accompanied with another text dataitem that will be same name plus **\_EXT**.
+
+Examples in forms: ATPV3800, ATPV3803, ASW00F00, ASF036GM
+
+**CodeListForm** must be created with these details:
+
+- It must have prop **isModal**
+- The table / datasection with results must have the prop **isCodeList** (boolean)
+- If it has **search option**, we need to add a button with onClick={onSearchClick} (onSearchClick comes by props)
+- Examples in forms: ASPUIN01, ASWU25L1, ATWU00D1
+
+<div className="img-container">
+  <img src={codelist_search_3} alt="codelist_search_3" />
+  <img src={codelist_search_2} alt="codelist_search_2" />
+</div>
+
+- The search options will be set in the modal CodeListForm as normal dataItems.
+
+<div className="img-container">
+  <img src={codelist_search_4} alt="codelist_search_4" />
+  <img src={codelist_search_5} alt="codelist_search_5" />
+</div>
+
+# Profile
+
+In some tables we can find dataitems that, when clicked, open a modal with a detailed information form. These are called profiles.
+
+<div className="img-container">
+  <img src={profile_before_click} alt="profile_before_click" />
+  <img src={profile} alt="profile" />
+</div>
+
+- This dataitems must have the prop **Profile** with the code the form that should appear on the modal.
+- Examples in forms: ATW700D0, ATW700D1, ATWU00D1
+
+# False Codelist
+
+- We can add codelist style to normal DynamicSelectItems by using **codeListStyle** prop in SelectSource.
+- They will use same services as normal DynamicSelectItems and the rest of the props will be the same ones as if we were using the selector.
+
+<div className="img-container">
+  <img
+    src={false_codelist_modal_dataitem}
+    alt="false_codelist_modal_dataitem"
+  />
+  <img
+    src={false_codelist_modal_without_search}
+    alt="false_codelist_modal_without_search"
+  />
+</div>
+
+- We can also add search functionality by adding **"search"** prop to SelectSource component.
+- This will help us to search any text we write in code and label columns.
+
+<div className="img-container">
+  <img
+    src={false_codelist_modal_with_search}
+    alt="false_codelist_modal_with_search"
+  />
+</div>

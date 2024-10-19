@@ -1,0 +1,13 @@
+.footer-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  color:white;
+  z-index: 100;
+  background-color: var(--colour-headerbg);
+  height: 4.25rem;
+  padding: 1rem 2rem;
+}

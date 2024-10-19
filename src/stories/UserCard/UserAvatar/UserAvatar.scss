@@ -1,0 +1,75 @@
+/* global IMG_PREFIX */
+.bigAvatar {
+  width: 9rem;
+  height: 9rem;
+  border: solid 3px var(--colour-primary);
+  color: var(--colour-primary);
+}
+.lightTooltip {
+  font-size: 16px;
+  color: black;
+  background-color: white;
+}
+.imgThumbnail {
+  box-shadow: 0 2px 0 2px #333;
+  display: block;
+  padding: 0;
+  text-align: right;
+  border-width: 0;
+  margin-left: 1rem;
+  float: right;
+  margin-right: 1rem;
+}
+.containerImage {
+  position: relative;
+  padding: 0;
+}
+
+.far-right-photo{
+  float: right;
+  margin-top: -100px;
+  margin-right: 101px;
+}
+.imgCircle {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--colour-headerbg) !important;
+  @media screen and (max-width: 425px) {
+    margin-top: 1rem;
+    width: 90px;
+    height: 90px;
+  }
+}
+
+.small-avatar {
+  width: 45px !important;
+  height: 45px !important;
+}
+
+.dossier-selected-avatar {
+  width: 30px;
+  height: 30px;
+  margin: 0 1rem;
+}
+
+.imgCircleSmall {
+  border-radius: 50%;
+  border: 2px solid var(--colour-headerbg) !important;
+  border-color: var(--colour-secondary);
+  border-style: solid;
+  background-color: black;
+}
+.span {
+  position: absolute;
+  color: white;
+  text-align: center;
+  box-shadow: 0 2px 0 2px #333;
+  right: 0;
+  bottom: 5px;
+  padding: 10% 0;
+}

@@ -1,0 +1,23 @@
+.select-field {
+    vertical-align: unset !important;
+    color: var(--colour-disabled);
+    & > label {
+      color: rgba(0, 0, 0, 0.6) !important;
+    }
+    & > div {
+      &:disabled {
+          color: var(--colour-disabled);
+          -webkit-text-fill-color: var(--colour-disabled); //iOS
+          opacity: 1;
+          padding: 1rem 0.5rem 0;
+        }
+      & > input {
+        &:disabled {
+          color: var(--colour-disabled);
+          -webkit-text-fill-color: var(--colour-disabled); //iOS
+          opacity: 1;
+          padding: 1rem 0.5rem 0;
+        }
+      }
+    }
+  }

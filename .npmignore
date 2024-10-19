@@ -1,0 +1,34 @@
+# See https://stackoverflow.com/questions/31642477/how-can-i-publish-an-npm-package-with-distribution-files
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# misc
+.storybook/
+public/
+resources/
+src/
+.dockerignore
+.gitignore
+Dockerfile.buildkit
+Jenkinsfile
+package.json
+package-lock.json
+README.old.md
+README.md
+version.properties
+sonar-project.properties
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

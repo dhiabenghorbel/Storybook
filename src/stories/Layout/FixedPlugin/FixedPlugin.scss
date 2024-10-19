@@ -1,0 +1,53 @@
+.fixed-plugin-root {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.5em;
+  position: fixed;
+  right: 0;
+  width: 64px;
+  background: var(--colour-secondary);
+  z-index: 1031;
+  border-radius: 8px 0 0 8px;
+  text-align: center;
+  top: 265px;
+  color: white;
+  transition: 0.3s;
+}
+
+.fixed-plugin-root-hover {
+  margin-right: -47px;
+  &:hover {
+    margin-right: 0px;
+  }
+  &:visited {
+    margin-right: 0px;
+  }
+  &:focus {
+    margin-right: 0px;
+  }
+}
+
+.fixed-plugin-dropdown-show {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(-13%);
+  transform-origin: 0 0;
+}
+.fixed-plugin-dropdown {
+  transform: translateY(-15%);
+  top: 27px;
+  opacity: 0;
+  transform-origin: 0 0;
+  visibility: hidden;
+}
+.fixed-plugin-dropdown-menu {
+  right: 80px;
+  left: auto;
+  width: 290px;
+  border-radius: 0.1875rem;
+  padding: 0 0px;
+  position: absolute;
+  color: rgba(0, 0, 0, 0.87);
+  display: inline-block;
+}

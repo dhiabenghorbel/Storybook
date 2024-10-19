@@ -1,0 +1,16 @@
+.progress-bar {
+    margin-top: 3rem;
+	height: .3rem; 
+    width: 100%;
+    background-color:  rgba(0, 0, 0, 0.05);
+}
+.progress-status {  
+    height: .3rem; 
+    background-color: var(--colour-secondary);
+    animation: progress 2s infinite linear;
+} 
+
+@keyframes progress {
+  from {width: 1%;}
+  to {width:100% ;}
+}

@@ -1,0 +1,82 @@
+.floating-menu {
+  //position: absolute;
+  position: fixed;
+  top: 3.5rem;
+  background-color: var(--colour-light);
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  z-index: 110;
+}
+
+.floating-menu-date-picker {
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  z-index: 500;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  bottom: 0;
+}
+
+.floating-menu-black {
+  background-color: var(--colour-rolelist);
+  padding: 0.3rem;
+  color:white
+}
+
+.transparent-backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 75;
+}
+
+.floating-item {
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+  @media screen and (max-width: 425px) {
+    padding: 0.5rem 1rem;
+  }
+}
+
+.floating-item-special {
+  display: block;
+  text-align: center;
+  border: 1px solid var(--colour-disabled);
+  color: var(--colour-disabled);
+  background-color: var(--colour-headerbg);
+}
+
+.floating-item-special:hover {
+  background-color: var(--colour-disabled);
+  color: var(--colour-headerbg);
+}
+
+.floating-item-hover {
+  &:hover {
+    background-color: var(--colour-disabled);
+  }
+}
+
+.floating-item-hover-black {
+  &:hover {
+    background-color: var(--colour-primary);
+  }
+}
+
+.floating-menu-scroll {
+  max-height: 27em;
+  overflow: scroll;
+  overflow-x: hidden;
+  @media screen and (max-width: 425px) {
+    margin-top: 8rem;
+  }
+}
+
+

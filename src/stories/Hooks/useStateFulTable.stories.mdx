@@ -1,0 +1,26 @@
+import { Meta } from "@storybook/addon-docs";
+import * as constants from "../../GP4You/constants";
+
+<Meta title={`${constants.menuPath}/Hooks/useStateFulTable`} />
+
+# useStateFulTable
+
+The `useStatefulTable` hook is designed to manage state and behavior for displaying tabular data with interactive features. It takes several parameters, such as `children`, `population`, `domain`, `dossier`, `name`, `add`, `edit`, `remove`, `onlyUpdatedOccurrences`, `onlyFilteredOcurrences`, `preventPopup`, `DetailForm`, `onClick`, and `reload`, to control the behavior of the table.
+
+Here's a more detailed explanation of how the hook works:
+
+1. **State Management**: The hook sets up several state variables using React's `useState` hook, such as `selected` to store the selected occurrences in the table and `modal` to manage the modal content.
+
+2. **Context and Data Processing**: The hook uses the `GPContext` and `ModificableGPActionContext` contexts to access global state and dispatch functions. It also utilizes data processing functions from the `occurrenceProcessing` and `dataItemProcessing` modules to work with the table data.
+
+3. **Table Setup**: The hook extracts the relevant `DataItem` components from the `children` prop and builds the table's information and fields based on the data items. It also filters the data occurrences based on the provided population, domain, and name.
+
+4. **Selection Handling**: The hook provides functions `handleSelection` and `handleMassSelection` to manage occurrence selection in the table. It updates the `selected` state accordingly.
+
+5. **Modal Handling**: The hook handles modal behavior, such as showing or hiding the modal when the `reload` prop changes. It also sets up a modal to display more detailed information when clicking on a table row. The modal content includes the `DetailForm` prop and the `children`.
+
+6. **Event Handlers**: The hook defines event handlers, such as `handleClick`, `onAdd`, and `onDelete`, to handle table row clicks, adding new occurrences, and deleting selected occurrences, respectively.
+
+7. **Return Values**: The hook returns an array containing various elements related to the table's behavior, such as `tableFields` (an array of table fields), `displayingObjects` (the filtered and processed table data), `selected` (the selected occurrences), and various event handler functions.
+
+In summary, the `useStatefulTable` hook is a powerful utility that simplifies and centralizes the management of state and behavior for displaying tabular data with interactive features. It leverages React's hooks and global state management to handle various aspects of the table's behavior and provides event handlers and processed data for efficient and seamless table rendering and interactions.

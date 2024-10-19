@@ -1,0 +1,47 @@
+
+.widgetContainerNotImplemented {
+  // height: 175px;
+  margin: 5px;
+  overflow: hidden;
+  border-color: var(--colour-third);
+  background-color: var(--colour-third) !important;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-clip: border-box;
+  border: 1px solid var(--colour-third);
+  border-radius: 0.25rem;
+}
+.widgetContainer {
+  height: 100%;
+  margin: 5px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-clip: border-box;
+  border-radius: 0.25rem;
+}
+.widgetHeader {
+  height: 15px;
+  text-align: right;
+  z-index: 1;
+}
+.optionIconHeader {
+  cursor: pointer;
+  font-size: 15px;
+}
+.widgetBody {
+  height: 100%;
+}
+
+.twitter-container {
+  height: 100%;
+  & div {
+    height: 100%;
+  }
+}

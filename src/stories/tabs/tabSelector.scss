@@ -1,0 +1,58 @@
+.tab-selector {
+  margin: 2rem 0;
+  height: 3rem;
+}
+
+.tab-container {
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 2rem;
+  @media screen and (max-width: 425px) {
+    margin: 0 0.5rem;
+  }
+}
+
+.tab {
+  margin: 0.2rem 1rem;
+  font-size: 1.5rem;
+  border-bottom: 0.2rem transparent;
+  cursor: pointer;
+  font-weight: 300;
+  @media screen and (max-width: 425px) {
+    font-size: 1.3rem;
+    margin: 0.2rem 0;
+  }
+}
+
+.tab-indicator {
+  transition: 0.3s ease;
+  height: 0.15rem;
+  width: 100%;
+  background: transparent;
+}
+
+.tab-indicator-active {
+  background: var(--colour-secondary);
+  transition: 0.5s ease;
+}
+
+.tabs-card {
+  margin-top: 2rem;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 0;
+  }
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.flex-row-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

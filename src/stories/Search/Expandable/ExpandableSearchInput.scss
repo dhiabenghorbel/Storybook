@@ -1,0 +1,109 @@
+.search-box {
+  width: fit-content;
+  background: #ececec;
+  height: 40px;
+  border-radius: 40px;
+  padding: 2px;
+  display: flex;
+  box-shadow: 5px 4px 14px -6px #000000;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-box .expanded.buscar-txt {
+  width: 400px;
+  padding: 0 6px;
+}
+
+input.expanded.buscar-txt::placeholder {
+  color: var(--colour-primary);
+}
+
+.buscar-btn {
+  float: right;
+  width: 35px;
+  height: 30px;
+  border-radius: 50%;
+  // background: #2f3640;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  color: var(--colour-primary);
+  cursor: pointer;
+}
+
+.buscar-btn > i {
+  font-size: 15px;
+}
+
+.buscar-txt {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: var(--colour-primary);
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 0px;
+}
+
+.advanced-btn {
+  float: right;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #2f3640;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  color: white;
+  cursor: pointer;
+}
+
+.advanced-btn > i {
+  font-size: 15px;
+}
+
+.search-box > .advanced-btn {
+  display: none;
+}
+
+.search-box .expanded ~ .advanced-btn {
+  display: flex;
+  background: var(--colour-primary);
+  color: #ececec;
+}
+
+.advanced-text {
+  font-size: 12px;
+}
+
+.bubble-filter-item {
+  // background-color: #f07c0082;
+  position: relative;
+  padding: 0 0.5rem;
+  margin: 0 0.5rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  & div {
+    z-index: 10;
+  }
+}
+
+.bubble-filter-item::after {
+  background-color: var(--colour-secondary);
+  content: "";
+  left: 0;
+  top: 0;
+  opacity: 0.5;
+  position: absolute;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+}

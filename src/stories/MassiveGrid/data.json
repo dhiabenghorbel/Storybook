@@ -1,0 +1,89 @@
+[{
+    "EmployeeID" : 1,
+    "Last name & First name" : "Manuel Burazzi",
+    "Remote work type" : "",
+    "Start date" : "2023/02/03",
+    "End date" : "2023/02/11",
+    "Usage period" : "",
+    "Nb days per period" : 8,
+    "Remote work taken" : 2,
+    "Awaiting confirmation" : "",
+    "Current balance" : 0
+}, {
+    "EmployeeID" : 2,
+    "Last name & First name" : "Tolle Marcus",
+    "Remote work type" : "",
+    "Start date" : "2023/01/01",
+    "End date" : "2023/01/04",
+    "Usage period" : "",
+    "Nb days per period" : 3,
+    "Remote work taken" : 2,
+    "Awaiting confirmation" : "",
+    "Current balance" : 0
+}, {
+    "EmployeeID" : 3,
+    "Last name & First name" : "Karim Deschamps",
+    "Remote work type" : "",
+    "Start date" : "2023/04/04",
+    "End date" : "2023/04/14",
+    "Usage period" : "",
+    "Nb days per period" : 9,
+    "Remote work taken" : 5,
+    "Awaiting confirmation" : "",
+    "Current balance" : 0
+}, {
+    "EmployeeID" : 4,
+    "Last name & First name" : "Emiliano Martinez",
+    "Remote work type" : "",
+    "Start date" : "2023/01/04",
+    "End date" : "2023/01/09",
+    "Usage period" : "",
+    "Nb days per period" : 5,
+    "Remote work taken" : 4,
+    "Awaiting confirmation" : "",
+    "Current balance" : 0
+}, {
+    "EmployeeID" : 5,
+    "Last name & First name" : "Fernando Torres",
+    "Remote work type" : "",
+    "Start date" : "2023/11/04",
+    "End date" : "2023/11/16",
+    "Usage period" : "",
+    "Nb days per period" : 12,
+    "Remote work taken" : 5,
+    "Awaiting confirmation" : "",
+    "Current balance" : 0
+}, {
+    "EmployeeID" : 6,
+    "Last name & First name" : "Alex Maximilian",
+    "Remote work type" : "",
+    "Start date" : "2022/01/04",
+    "End date" : "2022/01/08",
+    "Usage period" : "",
+    "Nb days per period" : 4,
+    "Remote work taken" : 0,
+    "Awaiting confirmation" : "",
+    "Current balance" : 0
+}, {
+    "EmployeeID" : 7,
+    "Last name & First name" : "Aaron Ramsey",
+    "Remote work type" : "",
+    "Start date" : "2023/01/22",
+    "End date" : "2023/01/24",
+    "Usage period" : "",
+    "Nb days per period" : 2,
+    "Remote work taken" : 1,
+    "Awaiting confirmation" : "",
+    "Current balance" : 0
+}, {
+    "EmployeeID" : 8,
+    "Last name & First name" : "Thierry Franc",
+    "Remote work type" : "",
+    "Start date" : "2023/09/20",
+    "End date" : "2023/09/28",
+    "Usage period" : "",
+    "Nb days per period" : 8,
+    "Remote work taken" : 3,
+    "Awaiting confirmation" : "",
+    "Current balance" : 0
+}]

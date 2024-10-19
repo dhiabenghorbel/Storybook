@@ -1,0 +1,28 @@
+- name: Deploy to env test
+  hosts: MT22
+  remote_user: mt22
+
+  tasks:
+    - name: Find package
+      local_action:
+        module: find
+        paths: "{{ directory_name }}"
+        patterns: "GP4YouStorybook-*.tar"
+      register: package
+
+    - name: Copy package
+      copy:
+        src: "{{ package.files[0].path }}"
+        dest: "/mt22/tomtools/webapps/{{ package.files[0].path | basename }}"
+      when: package.files | length > 0
+
+    - name: Unpack tarball
+      shell: tar -xvf "/mt22/tomtools/webapps/{{ package.files[0].path | basename }}" -C /mt22/tomtools/webapps
+      args:
+        executable: /bin/bash
+      when: package.files | length > 0
+
+    - name: Move tarball to backup folder
+      command:
+        cmd: mv "/mt22/tomtools/webapps/{{ package.files[0].path | basename }}" "/mt22/tomdirs/gp4you-backup"
+      when: package.files | length > 0

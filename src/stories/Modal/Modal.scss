@@ -1,0 +1,105 @@
+.modal-layer {
+  //position: fixed;
+  position: fixed;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+}
+
+.modal-level3 {
+  z-index: 600;
+  background-color: var(--colour-sidebar);
+  opacity: 0.7;
+}
+
+.modal-level2 {
+  z-index: 400;
+  background-color: var(--colour-sidebar);
+  opacity: 0.7;
+}
+
+.modal {
+  max-height: 82%;
+  padding: 2rem;
+  position: fixed;
+  z-index: 300;
+  background-color: rgb(255, 255, 255);
+  transition: 0.3s ease-in-out;
+  border-radius: 0.5rem;
+}
+
+.level2-container > div.modal {
+  z-index: 401;
+}
+
+.level3-container > div.modal {
+  z-index: 601;
+}
+
+.modal-default {
+  width: 70%;
+  margin: 3% 16%;
+
+  @media screen and (max-width: 425px) {
+    width: 93% !important;
+    margin-left: 1rem !important;
+    top: 6% !important;
+  }
+
+  @media screen and (max-width: 1024px) {
+    width: 95%;
+    position: fixed;
+    margin: auto;
+    top: 10%;
+    left: 0;
+    right: 0;
+  }
+}
+
+.modal-medium {
+  width: 50%;
+  margin: 6% 26%;
+
+  @media screen and (max-width: 1024px) {
+    width: 70%;
+    margin: 6% 15%;
+  }
+  @media screen and (max-width: 1540px) {
+    width: 44%;
+    margin: 2% 28%;
+    max-height: 90%;
+  }
+}
+
+.modal-small {
+  width: 25%;
+  margin: 5% 38%;
+
+  @media screen and (max-width: 1024px) {
+    width: 50%;
+    margin: 8% 25%;
+  }
+}
+
+.modal-close-btn {
+  cursor: pointer;
+  transition: 0.4s ease;
+  font-size: 1.5rem;
+  z-index: 3;
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  &:hover {
+    color: var(--colour-danger);
+  }
+}
+
+.nudoss-selector-button-container {
+  height: 5rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+

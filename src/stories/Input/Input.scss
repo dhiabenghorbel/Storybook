@@ -1,0 +1,173 @@
+.input-container {
+  padding: 0.3rem 0.6rem 0.3rem 0rem;
+  background: none;
+  align-items: center;
+}
+
+.input-error {
+  color: red;
+  font-size: 0.8rem;
+}
+
+.input-fields {
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  transition: 0.3s ease;
+  font-size: 1rem !important;
+}
+
+.input-fields-default {
+  border-bottom: 1px solid var(--colour-disabled);
+
+  &:focus-within {
+    border-bottom: 1px solid var(--colour-info);
+    box-shadow: 0 1px 0 0 var(--colour-info);
+  }
+
+  &:hover {
+    border-bottom: 1px solid var(--colour-primary);
+  }
+}
+
+.input-fields-disabled {
+  border-bottom: 1px dotted var(--colour-disabled);
+  color: var(--colour-disabled);
+  -webkit-text-fill-color: var(--colour-disabled); //iOS
+  opacity: 1;
+}
+
+.input-without-border {
+  border: 0;
+}
+
+.text-input,
+.select-input {
+  width: 100%;
+  height: 43px;
+  border: 1px;
+  background-color: rgba(255, 255, 255, 0);
+  padding: 1rem 0.5rem 0;
+  opacity: 1;
+  &:focus {
+    outline: none;
+  }
+}
+.text-area-input {
+  resize: none;
+}
+
+.input-label,
+.select-label {
+  position: absolute;
+  left: 0;
+  transform: translateY(20px);
+  transition: transform 0.25s ease-in-out;
+  transform-origin: 0% 100%;
+  pointer-events: none;
+  margin-bottom: 15px;
+}
+
+.radio-under-each-other {
+  margin-left: -22%;
+  display: block;
+}
+.radio-input-label {
+  color: var(--colour-disabled);
+  &:focus {
+    color: var(--colour-secondary);
+  }
+}
+
+.text-area-input:focus + .input-label,
+.text-input:focus + .input-label,
+.select-input:focus + .select-label {
+  transform: translateY(-7px) scale(0.8);
+  color: var(--colour-secondary);
+}
+
+.text-area-input::-webkit-input-placeholder,
+.text-input::-webkit-input-placeholder,
+.text-input::-moz-input-placeholder,
+.select-input::-webkit-input-placeholder,
+.select-input::-moz-input-placeholder {
+  color: transparent;
+}
+
+.text-area-input::placeholder,
+.text-input::placeholder,
+.select-input::placeholder {
+  color: transparent;
+}
+
+// because of this effect we need to diferent classes(select and text)
+
+.text-input:not(:placeholder-shown) + .input-label,
+.select-input:valid ~ .select-label,
+.select-input:disabled ~ .select-label {
+  transform: translateY(-7px) scale(0.8);
+  height: 10%;
+}
+
+.text-area-input:not([value=""]):not(:focus) + .select-label,
+.text-input:not([value=""]):not(:focus) + .input-label,
+.select-input:not([value=""]):not(:focus) + .select-label {
+  transform: translateY(-7px) scale(0.8);
+  height: 10%;
+}
+
+.text-input[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+.noArronSelect {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
+}
+
+.toolbar-size {
+  width: 200px;
+}
+
+.dossier-selected {
+  display: flex;
+  border-radius: 10px;
+  padding: 0 1rem;
+  width: 20rem;
+  height: 4rem;
+}
+
+.dossier-selected-avatar {
+  height: 2rem;
+  width: 2rem;
+}
+
+.infoInput input {
+  border: none;
+  &:focus,
+  &:active,
+  &:hover {
+    outline: none;
+  }
+}
+
+.border-bottom-black {
+  border-bottom: "1px solid black";
+}
+
+.text-link {
+  color: var(--colour-link);
+  &active,
+  &:hover {
+    color: #23527c;
+  }
+}
+
+.material-select {
+  vertical-align: unset !important;
+}

@@ -1,0 +1,57 @@
+.snackbar-container {
+  width: 35%;
+  min-height: 6rem;
+  max-height: 8rem;
+  border-radius: 0.5rem;
+  position: fixed;
+  bottom: -8rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  transition: 0.3s ease;
+  z-index: 400;
+
+  &.Success {
+    z-index: 99999999;
+    background-color: var(--colour-success);
+  }
+  &.Error {
+    background-color: var(--colour-danger);
+  }
+  &.Info {
+    background-color: var(--colour-info);
+  }
+  &.Warning {
+    background-color: var(--colour-warning);
+  }
+
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+  }
+}
+
+.snackbar-show {
+  bottom: 0;
+}
+
+.snackbar-message {
+  font-size: 1.1rem;
+  font-weight: 400;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.5em;
+  color: var(--colour-light);
+  margin: 0 2rem;
+  width: 80%;
+  max-height: 8rem;
+}
+
+.snackbar-icon {
+  color: var(--colour-light);
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: 400;
+}

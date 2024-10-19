@@ -1,0 +1,33 @@
+.header {
+  background: url("../../../media/content.jpg") center center no-repeat;
+  display: block;
+  background-size: cover;
+  margin-top: 2.5rem;
+  @media screen and (max-width: 425px) {
+    background: #c7c7c7;
+  }
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.avatar-container {
+  height: 12rem;
+  margin-left: 2rem;
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 425px) {
+    margin-top: 1rem;
+  }
+}
+
+.menu-container {
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 100%;
+  max-width: 50%;
+  color: rgb(0, 0, 0);
+}
